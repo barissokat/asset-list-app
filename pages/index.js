@@ -1,10 +1,11 @@
 import Head from 'next/head'
 import SearchArea from '../components/ui/organisms/searchArea/SearchArea'
-import 'bootstrap/dist/css/bootstrap.css'
-import styles from '../styles/Home.module.css'
 import TabBar from '../components/ui/organisms/tabBar/TabBar'
 
-export default function Home () {
+import 'bootstrap/dist/css/bootstrap.css'
+import styles from '../styles/Home.module.css'
+
+const Home = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -22,3 +23,5 @@ export default function Home () {
     </div>
   )
 }
+
+export default Home

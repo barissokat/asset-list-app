@@ -1,34 +1,34 @@
+import { connect } from 'react-redux'
+import { addItemToTabBar } from '../../../../redux/actions/actionCreators'
+
 import Link from '../../atoms/link/Link'
 import ListItem from '../../atoms/listItem/ListItem'
 
-const List = () => {
+const SearchResult = props => {
   const listItemClasses = 'list-group-item'
   const linkListClasses = 'badge bg-secondary link-light'
   const linkDetailClasses = 'badge bg-primary link-light'
   return (
     <ul className='list-group'>
-      <ListItem classes={listItemClasses}>
-        <Link classes={linkListClasses} link='#a'>Asset List</Link>
-        <span className='mx-2'>|</span>
-        <Link classes={linkDetailClasses} link='#a1'>Asset 1 Detail</Link>
-      </ListItem>
-      <ListItem classes={listItemClasses}>
-        <Link classes={linkListClasses} link='#a'>Asset List</Link>
-        <span className='mx-2'>|</span>
-        <Link classes={linkDetailClasses} link='#a2'>Asset 2 Detail</Link>
-      </ListItem>
-      <ListItem classes={listItemClasses}>
-        <Link classes={linkListClasses} link='#p'>Person List</Link>
-        <span className='mx-2'>|</span>
-        <Link classes={linkDetailClasses} link='#p1'>Person 1 Detail</Link>
-      </ListItem>
-      <ListItem classes={listItemClasses}>
-        <Link classes={linkListClasses} link='#p'>Person List</Link>
-        <span className='mx-2'>|</span>
-        <Link classes={linkDetailClasses} link='#p2'>Person 2 Detail</Link>
-      </ListItem>
+      {props.dataList.map((data, i) => (
+        <ListItem classes={listItemClasses} key={i}>
+          <Link onClick={() => props.addItemToTabBar.bind(null, data)} id={data.id} classes={linkListClasses} link={data.category === 'assets' ? '#a' : '#p'}>{data.category}</Link>
+          <span className='mx-2'>|</span>
+          <Link onClick={() => props.addItemToTabBar.bind(null, data)} id={data.id} classes={linkDetailClasses} link={data.url}>{data.name}</Link>
+          <button onClick={() => props.addItemToTabBar(data)}> seç</button>
+        </ListItem>
+      ))}
     </ul>
   )
 }
 
-export default List
+const mapStateToProps = state => {
+  return {
+    dataList: state.dataList,
+    tabBar: state.tabBar
+  }
+}
+
+const mapActionToProps = { addItemToTabBar }
+
+export default connect(mapStateToProps, mapActionToProps)(SearchResult)

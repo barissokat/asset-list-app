@@ -7,7 +7,7 @@ const Tab = props => {
       <NextLink classes={linkClasses} link={props.link}>
         {props.children}
       </NextLink>
-      <Button classes='btn btn-link m-0' value='X' />
+      <Button onClick={() => props.removeItemToTabBar(props.key)} classes='btn btn-link m-0' value='X' />
     </div>
   )
 }
