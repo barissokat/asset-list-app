@@ -3,7 +3,7 @@ import SearchResult from '../../molecules/searchResult/SearchResult'
 
 const SearchArea = () => {
   return (
-    <div>
+    <div className='w-100'>
       <Search />
       <SearchResult />
     </div>

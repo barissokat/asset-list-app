@@ -3,9 +3,9 @@ import Input from '../../atoms/Input/Input'
 
 const Search = () => {
   return (
-    <div className='input-group'>
+    <div className='input-group mb-2'>
       <Input />
-      <Button />
+      <Button value='Search' />
     </div>
   )
 }
