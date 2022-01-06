@@ -1,0 +1,25 @@
+.searchbox {
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+}
+
+.searchbox__title {
+  font-weight: 800;
+}
+
+.searchbox__subtitle {
+  color: #a1a1aa;
+}
+
+.searchbox__navlink {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #71717A;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.active {
+  padding-bottom: .6rem;
+  border-bottom: 2px solid red;
+}

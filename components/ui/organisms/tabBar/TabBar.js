@@ -6,10 +6,11 @@ import Tab from '../../molecules/tab/Tab'
 
 const TabBar = props => {
   const listItemClasses = 'nav-item'
-  console.log(props.tabBar)
   return (
     <ul className='nav nav-pills border-bottom'>
       <ListItem classes={listItemClasses}><Tab link='/'>Search</Tab></ListItem>
+      <ListItem classes={listItemClasses}><Tab link='/list'>List</Tab></ListItem>
+      <ListItem classes={listItemClasses}><Tab link='/details'>Details</Tab></ListItem>
       {props.tabBar.map((data, i) => (
         <ListItem key={i} classes={listItemClasses}>
           <Tab link={data.url}>{data.name}</Tab>
