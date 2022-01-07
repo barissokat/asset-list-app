@@ -1,0 +1,35 @@
+.card {
+  background: transparent;
+}
+
+.card__title {
+  color: #52525b;
+}
+
+.card__summary {
+  color: #71717a;
+  margin: 0;
+}
+
+.card__number {
+  color: #581c87;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.card__badge {
+  display: inline-block;
+  padding: 0.6em 0.9em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 50rem;
+}
+
+.card__badge__success {
+  color: #166534;
+  background-color: #BBF7D0;
+  font-size: .8rem;
+}

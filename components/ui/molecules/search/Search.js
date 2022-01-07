@@ -1,11 +1,10 @@
-import Button from '../../atoms/Button/Button'
-import Input from '../../atoms/Input/Input'
+import styles from './Search.module.css'
 
-const Search = () => {
+const Search = props => {
   return (
-    <div className='input-group mb-2'>
-      <Input />
-      <Button value='Search' />
+    <div className={styles.search}>
+      <input type='text' className={styles.search__input} placeholder={props.placeholder} aria-describedby='basic-addon1' />
+      <div type='button' className={styles.search__button}>III</div>
     </div>
   )
 }

@@ -1,0 +1,16 @@
+.navigation__navitem {
+  margin-right: 1.5rem;
+}
+
+.navigation__navlink {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #71717A;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.active {
+  padding-bottom: .6rem;
+  border-bottom: 2px solid red;
+}

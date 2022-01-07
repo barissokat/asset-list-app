@@ -1,0 +1,11 @@
+.widget {
+  padding: 2rem 3rem;
+  border: 2px solid #e4e4e7;
+  border-radius: 10px;
+  background: #f4f4f5;
+}
+
+.widget__title {
+  text-transform: uppercase;
+  font-weight: 700;
+}

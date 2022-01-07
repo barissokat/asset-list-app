@@ -1,12 +1,11 @@
 import Head from 'next/head'
-import SearchArea from '../components/ui/organisms/searchArea/SearchArea'
-import TabBar from '../components/ui/organisms/tabBar/TabBar'
+import Navbar from '../components/ui/organisms/navbar/Navbar'
+import Searchbox from '../components/ui/organisms/searchbox/Searchbox'
+import Row2Cols from '../components/templates/row2Cols/Row2Cols'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import styles from '../styles/Home.module.css'
-import Navbar from '../components/ui/organisms/navbar/Navbar'
-import Searchbox from '../components/ui/organisms/searchbox/Searchbox'
-import Widgetsbox from '../components/ui/organisms/widgetsbox/Widgetbox'
+import Numbers from '../components/ui/organisms/widgets/numbers/Numbers'
 
 const Home = () => {
   return (
@@ -19,10 +18,12 @@ const Home = () => {
 
       <Navbar />
 
-      <div id='main'>
+      <div id='main' className='container-fluid'>
         <Searchbox />
 
-        <Widgetsbox />
+        <Numbers />
+
+        <Row2Cols />
       </div>
 
       {/* <div className='container'>
