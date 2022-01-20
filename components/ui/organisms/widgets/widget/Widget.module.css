@@ -10,3 +10,7 @@
   text-transform: uppercase;
   font-weight: 700;
 }
+
+.borderradius {
+  border-radius: 50%;
+}
