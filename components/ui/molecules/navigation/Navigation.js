@@ -2,7 +2,7 @@ import styles from './Navigation.module.css'
 
 const Navigation = props => {
   return (
-    <ul class='nav d-flex justify-content-center'>
+    <ul className='nav d-flex justify-content-center'>
       <li className={`nav-item ${styles.navigation__navitem} ${styles.active}`}>
         <a className={`${styles.navigation__navlink}`} aria-current='page' href='#'>All</a>
       </li>

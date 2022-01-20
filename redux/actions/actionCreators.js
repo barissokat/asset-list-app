@@ -1,15 +1,16 @@
-export const addItemToTabBar = item => {
-  console.log(item)
+export const ADD_ITEM = 'ADD_ITEM'
+export const REMOVE_ITEM = 'REMOVE_ITEM'
+
+export const addItemToTabbar = text => {
   return {
-    type: 'ADD_ITEM',
-    payload: item
+    type: ADD_ITEM,
+    payload: { text }
   }
 }
 
-export const removeItemToTabBar = i => {
-  console.log(i)
+export const removeItemFromTabbar = text => {
   return {
-    type: 'REMOVE_ITEM',
-    i
+    type: REMOVE_ITEM,
+    payload: { text }
   }
 }

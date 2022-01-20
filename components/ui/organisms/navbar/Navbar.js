@@ -1,7 +1,11 @@
+import { connect } from 'react-redux'
+import { removeItemFromTabbar } from '../../../../redux/actions/actionCreators'
+
 import Search from '../../molecules/search/Search'
+
 import styles from './Navbar.module.css'
 
-const Navbar = props => {
+const Navbar = ({ tabs, removeItemFromTabbarHandler }) => {
   return (
     <div id='navbar' className={styles.navbar}>
       <div className='col-md-2'>
@@ -11,13 +15,16 @@ const Navbar = props => {
         <div className='d-flex mt-2'>
           <div className={styles.tabbar}>
             <div type='button' className={styles.tabbar__addbutton}>+</div>
-            <div type='button' class={styles.tabbar__homebutton}>Home</div>
-            <div type='button' class={styles.tabbar__tab}>
+            <div type='button' className={styles.tabbar__homebutton}>Home</div>
+            <div type='button' className={styles.tabbar__tab}>
               <span>ASSET</span><span>120320</span>
             </div>
-            <div type='button' class={styles.tabbar__tab}>
-              <span>ASSET</span><span>120321</span>
-            </div>
+            {tabs.map((tab, index) =>
+              <div key={index} type='button' className={styles.tabbar__tab}>
+                <span>{tab.text}</span>
+                <span onClick={() => removeItemFromTabbarHandler(tab.text)}>x</span>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -28,4 +35,16 @@ const Navbar = props => {
   )
 }
 
-export default Navbar
+const mapStateToProps = state => {
+  return {
+    tabs: state.tabs
+  }
+}
+
+const mapActionToProps = dispatch => {
+  return {
+    removeItemFromTabbarHandler: text => dispatch(removeItemFromTabbar(text))
+  }
+}
+
+export default connect(mapStateToProps, mapActionToProps)(Navbar)
