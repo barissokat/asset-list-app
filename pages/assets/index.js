@@ -64,7 +64,7 @@ export default function Assets () {
                   <Col lg='10'> <span className='badge-info'>Abandoned</span></Col>
 
                 </Row>
-                <Row className='p-2  my-3 nibble'>
+                <Row className='p-2  my-1 nibble'>
                   <Col lg='3'>
 
                     <span className='asset-sub-title'>Address</span>
