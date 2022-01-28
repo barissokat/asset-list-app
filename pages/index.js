@@ -1,11 +1,12 @@
 import Head from 'next/head'
+
 import Navbar from '../components/ui/organisms/navbar/Navbar'
 import Searchbox from '../components/ui/organisms/searchbox/Searchbox'
+import Numbers from '../components/ui/organisms/widgets/numbers/Numbers'
 import Row2Cols from '../components/templates/row2Cols/Row2Cols'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import styles from '../styles/Home.module.css'
-import Numbers from '../components/ui/organisms/widgets/numbers/Numbers'
 
 const Home = () => {
   return (
@@ -25,13 +26,6 @@ const Home = () => {
 
         <Row2Cols />
       </div>
-
-      {/* <div className='container'>
-        <TabBar />
-      </div>
-      <main className={`container ${styles.main}`}>
-        <SearchArea />
-      </main> */}
     </div>
   )
 }

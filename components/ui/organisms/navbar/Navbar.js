@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { connect } from 'react-redux'
 import { removeItemFromTabbar } from '../../../../redux/actions/actionCreators'
 
@@ -14,14 +15,21 @@ const Navbar = ({ tabs, removeItemFromTabbarHandler }) => {
       <div className='col-md-8'>
         <div className='d-flex mt-2'>
           <div className={styles.tabbar}>
-            <div type='button' className={styles.tabbar__addbutton}>+</div>
-            <div type='button' className={styles.tabbar__homebutton}>Home</div>
+            <div type='button' className={styles.tabbar__homebutton}>
+              <Link href='/'>
+                Home
+              </Link>
+            </div>
             <div type='button' className={styles.tabbar__tab}>
               <span>ASSET</span><span>120320</span>
             </div>
             {tabs.map((tab, index) =>
               <div key={index} type='button' className={styles.tabbar__tab}>
-                <span>{tab.text}</span>
+                <span>
+                  <Link href='assets'>
+                    {tab.text}
+                  </Link>
+                </span>
                 <span onClick={() => removeItemFromTabbarHandler(tab.text)}>x</span>
               </div>
             )}

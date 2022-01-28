@@ -4,6 +4,7 @@
   border-radius: 10px;
   background: #f4f4f5;
   min-height: 250px;
+  width: 100%;
 }
 
 .widget__title {
