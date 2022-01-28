@@ -21,16 +21,21 @@ const Navbar = ({ tabs, removeItemFromTabbarHandler }) => {
               </Link>
             </div>
             <div type='button' className={styles.tabbar__tab}>
-              <span>ASSET</span><span>120320</span>
+              <span>
+                <Link href='assets'>
+                  ASSET
+                </Link>
+              </span>
+              <span>120320</span>
             </div>
             {tabs.map((tab, index) =>
               <div key={index} type='button' className={styles.tabbar__tab}>
                 <span>
-                  <Link href='assets'>
+                  <span className='me-2'>
                     {tab.text}
-                  </Link>
+                  </span>
+                  <span onClick={() => removeItemFromTabbarHandler(tab.text)}>X</span>
                 </span>
-                <span onClick={() => removeItemFromTabbarHandler(tab.text)}>x</span>
               </div>
             )}
           </div>
@@ -39,7 +44,7 @@ const Navbar = ({ tabs, removeItemFromTabbarHandler }) => {
       <div className='col-md-2 pe-4'>
         <Search placeholder='> Start search' />
       </div>
-    </div>
+    </div >
   )
 }
 

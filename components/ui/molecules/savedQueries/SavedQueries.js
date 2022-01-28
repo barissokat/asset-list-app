@@ -15,7 +15,7 @@ const SavedQueries = ({ tabs, addItemToTabbar }) => {
       <li className='nav-item'>
         <a
           className='nav-link' href='#'
-          onClick={() => addItemToTabbarHandler('tabb1')}
+          onClick={() => addItemToTabbarHandler('TAB1')}
         >
           <span className={` bg-secondary ${styles.badge}`}>Saved Query 1</span>
         </a>
@@ -23,7 +23,7 @@ const SavedQueries = ({ tabs, addItemToTabbar }) => {
       <li className='nav-item'>
         <a
           className='nav-link' href='#'
-          onClick={() => addItemToTabbarHandler('tabb2')}
+          onClick={() => addItemToTabbarHandler('TAB2')}
         >
           <span className={` bg-secondary ${styles.badge}`}>Saved Query 2</span>
         </a>
@@ -31,7 +31,7 @@ const SavedQueries = ({ tabs, addItemToTabbar }) => {
       <li className='nav-item'>
         <a
           className='nav-link' href='#'
-          onClick={() => addItemToTabbarHandler('tabb3')}
+          onClick={() => addItemToTabbarHandler('TAB3')}
         >
           <span className={` bg-secondary ${styles.badge}`}>Saved Query 3</span>
         </a>
